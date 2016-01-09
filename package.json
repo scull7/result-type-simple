@@ -1,6 +1,6 @@
 {
   "name": "result-type-simple",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A simple Result object type implementation that I like and want to use in several projects.",
   "main": "index.js",
   "directories": {
