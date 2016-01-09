@@ -56,6 +56,7 @@ Result.chain = function(fn, result) {
 Result.curry = function(curry_impl) {
   Result.map    = curry_impl(Result.map);
   Result.either = curry_impl(Result.either);
+  Result.chain  = curry_impl(Result.chain);
 
   return Result;
 };

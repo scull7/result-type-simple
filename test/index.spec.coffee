@@ -108,6 +108,13 @@ describe 'Result Type', ->
 
       assert.deepEqual cEither(Result(null, 2)), Result(null, 9)
 
+    it 'should curry the chain function', ->
+
+      fn = (x) -> Result null, x + 17
+      cChain = _Result.chain(fn)
+
+      assert.deepEqual cChain(Result(null, 2)), Result(null, 19)
+
       
   describe 'chain', ->
 
