@@ -27,6 +27,12 @@ Given 2 functions, the first function will be called when Result.isOK is false
 and the second when Result.isOK is true. Both functions will receive the 
 Result object's value.
 
+### `chain` (Result a -> Result b) -> Result a -> Result b
+
+Given a function that returns a result map the unwrapped result value to the
+input of that function.  The given function is responsible for returning
+a Result object.  This can effectively be used as an unwrap function.
+
 ### `curry` (a -> a) -> Result (really, it's just a guess at best)
 
 Enables you to curry the `map` and `either` functions with the curry library

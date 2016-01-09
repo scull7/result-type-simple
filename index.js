@@ -41,7 +41,7 @@ Result.either = function(errFn, okFn, result) {
 };
 
 
-// chain : (Result a -> b) -> Result a -> Result b
+// chain : (Result a -> Result b) -> Result a -> Result b
 Result.chain = function(fn, result) {
   if (Result.isOK(result)) {
     return fn(result.value)
