@@ -41,6 +41,16 @@ Result.either = function(errFn, okFn, result) {
 };
 
 
+// chain : (Result a -> b) -> Result a -> Result b
+Result.chain = function(fn, result) {
+  if (Result.isOK(result)) {
+    return fn(result.value)
+  } else {
+    return result
+  }
+};
+
+
 // A function that will return a curried version of the `map` and `either`
 // methods using the curry module of your choosing.
 Result.curry = function(curry_impl) {
